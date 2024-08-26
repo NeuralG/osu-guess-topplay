@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main>
+			<input
+				class="guess-input"
+				id="guess-input"
+				placeholder="Guess a beatmap..."
+				autocomplete="off"
+			/>
+			<button class="guess-btn" id="guess-btn">GUESS!</button>
+
+			<div class="hint hint1" id="hint1"><p>PP</p></div>
+			<div class="hint hint2 fade" id="hint2">
+				<p>ACC</p>
+			</div>
+			<div class="hint hint3 fade" id="hint3">
+				<p>MISSES</p>
+			</div>
+			<div class="hint hint4 fade" id="hint4"><p>MODS</p></div>
+			<div class="hint hint5 fade" id="hint5">
+				<p>BG</p>
+			</div>
+		</main>
+		<dialog id="welcome-dialog" class="welcome-dialog">
+			<p>Welcome to guess your <br />osu! top play!</p>
+			<input id="osuid" placeholder="Type your osu! id" />
+			<p>Choose a mode:</p>
+			<div>
+				<input
+					name="mode"
+					type="radio"
+					id="osu"
+					class="hidden"
+					checked
+				/>
+				<label class="selected" for="osu">osu!</label>
+				<input name="mode" type="radio" id="taiko" class="hidden" />
+				<label for="taiko">taiko</label>
+				<input name="mode" type="radio" id="catch" class="hidden" />
+				<label for="catch">catch</label>
+				<input name="mode" type="radio" id="mania" class="hidden" />
+				<label for="mania">mania</label>
+				<input name="mode" type="radio" id="random" class="hidden" />
+				<label for="random">random</label>
+			</div>
+			<button id="start-btn">START!</button>
+		</dialog>
+		<dialog id="end-dialog" class="end-dialog">
+			<img src="party.png" class="partyimg" />
+			<h2>Congratulations!</h2>
+			<p>
+				You guessed the map in
+				<span id="guess-count-end">x</span> guesses!
+			</p>
+			<div id="img-end"></div>
+		</dialog>
+	</body>
+	<script src="index.js"></script>
+</html>

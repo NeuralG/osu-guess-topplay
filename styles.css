@@ -1,0 +1,202 @@
+/* css resets */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+body {
+	min-height: 100vh;
+}
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+.flex {
+	display: flex !important;
+}
+
+/* guess part */
+
+body {
+	background-color: #6b72f8;
+}
+
+main {
+	display: grid;
+	width: 60%;
+	margin: auto;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 15px;
+}
+
+.guess-input {
+	background-color: #eeeeee;
+	grid-column: span 8;
+	height: 70px;
+	text-align: center;
+	font-size: 32px;
+}
+
+.guess-input,
+.guess-input:focus,
+.guess-btn {
+	outline: 0;
+	border: 0;
+}
+
+.guess-input:focus,
+.guess-input:hover {
+	background-color: antiquewhite;
+}
+
+.guess-btn {
+	grid-column: span 2 / 13;
+	font-size: 32px;
+	font-weight: bolder;
+	background-color: #80ffb0;
+}
+
+.guess-btn:hover {
+	filter: opacity(0.8);
+	cursor: pointer;
+}
+
+.guess-btn,
+.guess-input {
+	margin-top: 120px;
+	border-radius: 15px;
+}
+
+/*  hints  */
+
+.hint {
+	grid-column: span 2;
+	background-color: #c9dc3a;
+	height: 120px;
+	text-align: center;
+	display: flex;
+	font-size: 28px;
+	margin-top: 30px;
+	border-radius: 15px;
+}
+
+.hint > p {
+	display: block;
+	margin: auto;
+}
+
+.hint5 {
+	grid-column: span 4;
+}
+
+.hint5 > img {
+	width: 100%;
+	filter: grayscale() blur(4px);
+}
+
+.fade {
+	background-color: black;
+	user-select: none;
+	color: whitesmoke;
+}
+
+/* popups */
+
+.welcome-dialog {
+	background-color: #cbe02f;
+	flex-direction: column;
+	padding: 10px 20px 40px;
+	margin: auto;
+	outline: 0;
+	border: 0;
+	text-align: center;
+	gap: 20px;
+}
+
+.welcome-dialog > p {
+	font-size: 36px;
+	margin: 10px;
+}
+
+.welcome-dialog > input {
+	padding: 20px 40px;
+	width: 85%;
+	margin: auto;
+	border: 0;
+	background-color: #6b72f8;
+	color: white;
+	text-align: center;
+	border-radius: 15px;
+	font-size: 16px;
+}
+
+.welcome-dialog > input::placeholder {
+	color: white;
+}
+
+input:focus::placeholder {
+	color: transparent;
+}
+
+.welcome-dialog > div {
+	display: flex;
+	gap: 30px;
+	margin: auto;
+}
+
+.welcome-dialog > button {
+	background-color: #6b72f8;
+	color: black;
+	font-weight: bold;
+	margin: 20px 30px;
+	padding: 20px;
+	font-size: 40px;
+	border-radius: 15px;
+}
+
+.welcome-dialog::backdrop {
+	background-color: #6b72f8;
+}
+
+.welcome-dialog > div > input[type="radio"]:checked + label {
+	background-color: #6b72f8;
+}
+
+/* end dialog*/
+
+.end-dialog {
+	background-color: #cbe02f;
+	flex-direction: column;
+	padding: 10px 20px 40px;
+	margin: auto;
+	outline: 0;
+	border: 0;
+	text-align: center;
+	gap: 20px;
+}
+
+.end-dialog > h2 {
+	font-size: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.partyimg {
+	width: 200px;
+	margin: auto;
+}
